@@ -14,7 +14,7 @@ include_once('../controllers/productController.php')
         <?php include_once('./includes/templateHeader.php'); ?>
 
         <div id="pageContent">
-            <?php include_once('./includes/productPageContent.php'); ?>
+            <?php include_once('./includes/productContent.php'); ?>
         </div>
 
         <?php include_once('./includes/templateFooter.php'); ?>

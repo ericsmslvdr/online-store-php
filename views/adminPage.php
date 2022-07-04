@@ -14,7 +14,7 @@ include_once('../controllers/adminPageController.php');
         <?php include_once('./includes/templateHeader.php'); ?>
 
         <div id="pageContent">
-            <?php include_once('./includes/adminPagePageContent.php'); ?>
+            <?php include_once('./includes/adminPageContent.php'); ?>
         </div>
 
         <?php include_once('./includes/templateFooter.php'); ?>

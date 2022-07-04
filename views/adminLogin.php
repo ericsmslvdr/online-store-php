@@ -14,7 +14,7 @@ include_once('../controllers/adminLoginController.php')
         <?php include_once("./includes/templateHeader.php"); ?>
 
         <div id="pageContent" class="fixed">
-            <?php include_once('./includes/adminLoginPageContent.php') ?>
+            <?php include_once('./includes/adminLoginContent.php') ?>
         </div>
 
         <?php include_once("./includes/templateFooter.php"); ?>

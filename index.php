@@ -14,7 +14,7 @@ include_once('./controllers/indexController.php')
         <?php include_once("./views/includes/templateHeader.php"); ?>
 
         <div id="pageContent">
-            <?php include_once('./views/includes/indexPageContent.php'); ?>
+            <?php include_once('./views/includes/indexContent.php'); ?>
         </div>
 
         <?php include_once("./views/includes/templateFooter.php"); ?>

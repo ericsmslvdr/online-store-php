@@ -14,7 +14,7 @@ include_once('../controllers/inventoryListController.php');
         <?php include_once("./includes/templateHeader.php"); ?>
 
         <div id="pageContent">
-            <?php include_once('./includes/inventoryListPageContent.php') ?>
+            <?php include_once('./includes/inventoryListContent.php') ?>
         </div>
 
         <?php include_once("./includes/templateFooter.php"); ?>
