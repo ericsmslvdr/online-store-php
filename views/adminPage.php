@@ -1,5 +1,5 @@
 <?php
-include_once('../controllers/adminPageController.php');
+include_once('../scripts/adminPageScript.php');
 ?>
 
 <html>

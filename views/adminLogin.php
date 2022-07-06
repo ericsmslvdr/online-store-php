@@ -1,5 +1,5 @@
 <?php
-include_once('../controllers/adminLoginController.php')
+include_once('../scripts/login.php')
 ?>
 
 <html>

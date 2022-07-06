@@ -1,5 +1,5 @@
 <?php
-include_once('./controllers/indexController.php')
+include_once('./scripts/showProducts.php')
 ?>
 
 <html>

@@ -21,7 +21,7 @@
             <td>
                 <?php
                 if (isset($_SESSION['manager'])) {
-                    echo '<a href="/OnlineStorePHP/controllers/logoutController.php">Logout</a>';
+                    echo '<a href="/OnlineStorePHP/scripts/logout.php">Logout</a>';
                 }
                 ?>
             </td>
