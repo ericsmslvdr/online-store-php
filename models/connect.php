@@ -1,12 +1,18 @@
 <?php
-$db_host = "localhost";
-$db_username = "root";
-$db_pass = "";
-$db_name = "onlinestoredb";
 
-$con = mysqli_connect($db_host, $db_username, $db_pass, $db_name);
+class Connect {
+    public function connect() {
+        $dbHost = 'localhost';
+        $dbUser = 'root';
+        $dbPass = '';
+        $dbName = 'onlinestoredb';
 
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit;
+        $con = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
+
+        if ($con->connect_error) {
+            die("Connection failed: " . $con->connect_error);
+        }
+        echo "Connected successfully";
+    }
+
 }
