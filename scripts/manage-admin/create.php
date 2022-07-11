@@ -5,6 +5,6 @@ if (isset($_POST['addBtn'])) {
 
     $sql = mysqli_query($con, "INSERT INTO admin (username, password, last_log_date)
                                 VALUES ('$username', '$password', now())");
-    header("location: ./adminPage.php#formAdmin");
+    header("location: ./admin-page.php#formAdmin");
     exit();
 }

@@ -1,11 +1,11 @@
 <?php
-include_once('../scripts/product-details.php');
+include_once('../scripts/admin-page-script.php');
 ?>
 
 <html>
 
 <head>
-    <title><?php echo $product_name; ?></title>
+    <title>Manage Admin Accounts</title>
     <link rel="stylesheet" href="../views/css/styles.css">
 </head>
 
@@ -14,7 +14,7 @@ include_once('../scripts/product-details.php');
         <?php include_once('./includes/header.php'); ?>
 
         <div id="pageContent">
-            <?php include_once('./includes/product-content.php'); ?>
+            <?php include_once('./includes/admin-page-content.php'); ?>
         </div>
 
         <?php include_once('./includes/footer.php'); ?>

@@ -1,11 +1,11 @@
 <?php
 session_start();
 if (isset($_SESSION['manager'])) {
-    header("location: inventoryList.php");
+    header("location: inventory-list.php");
     exit();
 }
 
-require('../config/connect.php');
+require('../scripts/database.php');
 
 $show = '<input type="submit" name="button" class="pointer button" value="Log In">';
 
@@ -27,9 +27,9 @@ if (isset($_POST['frmUsername']) && isset($_POST['frmPassword'])) {
         $_SESSION['id'] = $id;
         $_SESSION['manager'] = $manager;
         $_SESSION['password'] = $password;
-        header("location: inventoryList.php");
+        header("location: inventory-list.php");
         exit();
     } else {
-        $show = 'That information is incorrect, <a href = "adminLogin.php">try again</a>';
+        $show = 'That information is incorrect, <a href = "admin-login.php">try again</a>';
     }
 }

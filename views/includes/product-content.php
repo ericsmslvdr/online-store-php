@@ -2,8 +2,8 @@
 echo '<table width="100%" border="0" cellspacing="0" cellpadding="15">
         <tr>
             <td width="19%" valign="top">
-                <a href="../inventoryImages/'. $id . '.jpg">
-                        <img src="../inventoryImages/'. $id . '.jpg" width="142" height="188" alt="' . $product_name . '">
+                <a href="../inventory-images/'. $id . '.jpg">
+                        <img src="../inventory-images/'. $id . '.jpg" width="142" height="188" alt="' . $product_name . '">
                 </a>
             </td>
             <td width="81%" valign="top">

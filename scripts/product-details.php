@@ -1,5 +1,5 @@
 <?php
-require('../config/connect.php');
+require('../scripts/database.php');
 
 if (isset($_GET['id'])) {
     $id = preg_replace('#[^0-9]#i', '', $_GET['id']);

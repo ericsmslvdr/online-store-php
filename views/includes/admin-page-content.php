@@ -12,11 +12,11 @@ echo '<div align="left" style="margin-left:24px;">
             <th bgcolor="#a9a9a9">Last Log Date</th>
             <th bgcolor="#a9a9a9">Edit</th>
         </tr>
-        ' . $adminlist . '
+        ' . $adminList . '
     </table>
     <br><br>
 
-    <form method="post" id="formAdmin" action="./adminPage.php#formAdmin">
+    <form method="post" id="formAdmin" action="./admin-page.php#formAdmin">
         <table cellpadding="5">
             <tr>
                 <th>';

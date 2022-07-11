@@ -4,6 +4,6 @@ if (isset($_POST['delBtn'])) {
 
     $sql = mysqli_query($con, "DELETE FROM admin 
                                 WHERE id = $admin_id");
-    header("location: ./adminPage.php#tableAdmin");
+    header("location: ./admin-page.php#tableAdmin");
     exit();
 }

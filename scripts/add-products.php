@@ -1,11 +1,11 @@
 <?php
 session_start();
+require('../scripts/database.php');
+
 if (!isset($_SESSION['manager'])) {
-    header("location: adminLogin.php");
+    header("location: admin-login.php");
     exit();
 }
-
-require('../config/connect.php');
 
 if (isset($_POST['productName'])) {
     $productName = mysqli_real_escape_string($con, $_POST['productName']);
@@ -19,7 +19,7 @@ if (isset($_POST['productName'])) {
 
     $pid = mysqli_insert_id($con);
     $newName = "$pid.jpg";
-    move_uploaded_file($_FILES['fileField']['tmp_name'], "../inventoryImages/$newName");
-    header("location: inventoryList.php");
+    move_uploaded_file($_FILES['fileField']['tmp_name'], "../inventory-images/$newName");
+    header("location: inventory-list.php");
     exit();
 }

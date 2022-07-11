@@ -18,11 +18,11 @@ if (isset($_POST['updateBtnConfirm']) && isset($_POST['username'])) {
                                 SET username = '$username', password = '$password'
                                 WHERE id = $admin_id");
     $isUpdate = false;
-    header("location: ./adminPage.php#formAdmin");
+    header("location: ./admin-page.php#formAdmin");
     exit();
 }
 if (isset($_POST['cancelBtn'])) {
     $isUpdate = false;
-    header("location: ./adminPage.php#formAdmin");
+    header("location: ./admin-page.php#formAdmin");
     exit();
 }

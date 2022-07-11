@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('../config/connect.php');
+require('../scripts/database.php');
 
 //Section 1 (if user attempts to add something to the cart from the page)
 if (isset($_POST['pid'])) {
@@ -94,10 +94,10 @@ if (!isset($_SESSION['cart_array']) || count($_SESSION['cart_array']) < 1) {
     // Start the For Each loop
     $i = 0;
     foreach ($_SESSION['cart_array'] as $each_item) {
-        $item_id = $each_item['item_id'];
+        $itemID = $each_item['item_id'];
         $sql = mysqli_query($con, "SELECT * 
                                     FROM products 
-                                    WHERE id='$item_id' 
+                                    WHERE id='$itemID' 
                                     LIMIT 1");
         while ($row = mysqli_fetch_array($sql)) {
             $product_name = $row['product_name'];
@@ -111,14 +111,14 @@ if (!isset($_SESSION['cart_array']) || count($_SESSION['cart_array']) < 1) {
         $pricetotal = number_format($pricetotal, 2);
 
         // Create the product array variable
-        $product_id_array .= "$item_id-" . $each_item['quantity'] . ",";
+        $product_id_array .= "$itemID-" . $each_item['quantity'] . ",";
 
         // Dynamic table row assembly
         $cartOutput .= '<tr>
                             <td style="text-align: center;">
-                                <img src="../inventoryImages/' . $item_id . '.jpg" alt="' . $product_name . '" width="60" height="60" border="1">
+                                <img src="../inventory-images/' . $itemID . '.jpg" alt="' . $product_name . '" width="60" height="60" border="1">
                                 <br>
-                                <a href="./product.php?id=' . $item_id . '">' . $product_name . '</a>
+                                <a href="./product.php?id=' . $itemID . '">' . $product_name . '</a>
                             </td>
 
                             <td>
@@ -134,7 +134,7 @@ if (!isset($_SESSION['cart_array']) || count($_SESSION['cart_array']) < 1) {
                                     <input name="quantity" type="text" class="input" value="' . $each_item['quantity'] . '"size="1" maxlength="2">
                                     <br>
                                     <input type="submit" class="pointer button" value="change">
-                                    <input name="item_to_adjust" type="hidden" value="' . $item_id . '">
+                                    <input name="item_to_adjust" type="hidden" value="' . $itemID . '">
                                 </form>
                             </td>
                             

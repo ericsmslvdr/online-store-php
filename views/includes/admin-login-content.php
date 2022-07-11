@@ -2,7 +2,7 @@
 echo '<br>
     <div align="left" style="margin-left:24px;">
         <h2>Please Log In To Manage the Store</h2>
-        <form id="form1" name="form1" method="post" action="./adminLogin.php">
+        <form id="form1" name="form1" method="post" action="./admin-login.php">
             <table cellpadding="5">
                 <tr>
                     <td>

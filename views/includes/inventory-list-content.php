@@ -7,7 +7,7 @@ echo '<div align="left" style="margin-left:24px;">
     <h3>
     &darr; Add New Inventory Item Form &darr;
     </h3>
-    <form action="inventoryList.php" enctype="multipart/form-data" name="myForm" id="myform" method="post">
+    <form action="inventory-list.php" enctype="multipart/form-data" name="myForm" id="myform" method="post">
         <table width="90%" border="0" cellspacing="0" cellpadding="6">
             <tr>
                 <td width="20%" align="right">

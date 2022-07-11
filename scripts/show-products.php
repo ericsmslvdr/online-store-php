@@ -1,5 +1,5 @@
 <?php
-require('./config/connect.php');
+require('./scripts/database.php');
 
 $dynamicList = "";
 
@@ -17,7 +17,7 @@ if ($productCount > 0) {
         $dynamicList .= '<table width="100%" border="0" cellpadding="6">
                             <tr>
                                 <td width="17%" valign="top">
-                                    <a href="./views/product.php?id= ' . $id . '"><img src="./inventoryImages/' . $id . '.jpg" alt="' . $product_name . '" width="75" height="100" border="1"></a>
+                                    <a href="./views/product.php?id= ' . $id . '"><img src="./inventory-images/' . $id . '.jpg" alt="' . $product_name . '" width="75" height="100" border="1"></a>
                                 </td>
                             
                                 <td width="83%" valign="top">
