@@ -12,7 +12,7 @@
         <td width="35%" valign="top">
             <h3>Latest Products</h3>
 
-            <?php echo $dynamicList; ?>
+            <?= $dynamicList; ?>
 
             <br>
         </td>

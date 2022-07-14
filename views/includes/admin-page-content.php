@@ -11,7 +11,7 @@
         <th bgcolor="#a9a9a9">Last Log Date</th>
         <th bgcolor="#a9a9a9">Edit</th>
     </tr>
-    <?php echo $adminList; ?>
+    <?= $adminList; ?>
 </table>
 <br><br>
 
@@ -32,14 +32,14 @@
             <td>
                 <label>Username:</label>
                 <br>
-                <input name="username" type="text" size="20" class="input" value="' . $username . '" placeholder="Enter Username Here" required>
+                <input name="username" type="text" size="20" class="input" value="<?= $username; ?>" placeholder="Enter Username Here" required>
             </td>
         </tr>
         <tr>
             <td>
                 <label>Password:</label>
                 <br>
-                <input name="password" type="text" size="20" class="input" value="' . $password . '" placeholder="Enter Password Here" required>
+                <input name="password" type="text" size="20" class="input" value="<?= $password; ?>" placeholder="Enter Password Here" required>
             </td>
         </tr>
         <tr>

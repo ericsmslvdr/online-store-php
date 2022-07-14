@@ -9,7 +9,7 @@
             <th width="9%" bgcolor="#a9a9a9">Remove</th>
         </tr>
 
-        <?php echo $cartOutput ?>
+        <?= $cartOutput; ?>
 
         <tr>
             <td>&nbsp;</td>
@@ -21,7 +21,7 @@
         </tr>
     </table>
 
-    <?php echo $cartTotal; ?>
+    <?= $cartTotal; ?>
 
     <br>
     <a href="cart.php?cmd=emptycart">Click Here to Empty Your Shopping Cart</a>

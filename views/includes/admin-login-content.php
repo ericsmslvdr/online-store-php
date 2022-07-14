@@ -18,7 +18,7 @@
             </tr>
             <tr>
                 <td>
-                    <?php echo $show; ?>
+                    <?= $show; ?>
                 </td>
             </tr>
         </table>
