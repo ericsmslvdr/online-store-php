@@ -97,7 +97,7 @@ if (!isset($_SESSION['cart_array']) || count($_SESSION['cart_array']) < 1) {
         $itemID = $each_item['item_id'];
         $sql = mysqli_query($con, "SELECT * 
                                     FROM products 
-                                    WHERE id='$itemID' 
+                                    WHERE id=$itemID 
                                     LIMIT 1");
         while ($row = mysqli_fetch_array($sql)) {
             $product_name = $row['product_name'];
@@ -120,15 +120,12 @@ if (!isset($_SESSION['cart_array']) || count($_SESSION['cart_array']) < 1) {
                                 <br>
                                 <a href="./product.php?id=' . $itemID . '">' . $product_name . '</a>
                             </td>
-
                             <td>
                                 ' . $details . '
                             </td>
-
                             <td>
                                 ₱' . $price . '
                             </td>
-
                             <td style="text-align: center;">
                                 <form action="cart.php" method="post">
                                     <input name="quantity" type="text" class="input" value="' . $each_item['quantity'] . '"size="1" maxlength="2">
