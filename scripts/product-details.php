@@ -6,7 +6,7 @@ if (isset($_GET['id'])) {
 
     $sql = mysqli_query($con, "SELECT * 
                             FROM products
-                            WHERE id = '$id'
+                            WHERE id = $id
                             LIMIT 1");
 
     $productCount = mysqli_num_rows($sql);;
