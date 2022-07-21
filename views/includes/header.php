@@ -1,30 +1,25 @@
-<div id="pageHeader">
-    <table width="100%" border="0" cellspacing="0" cellpadding="12">
-        <tr>
-            <td width="32%">
+<header>
+    <nav class="nav-bar">
+        <ul class="nav-left">
+            <li>
                 <a href="/online-store-php/index.php">
-                    <img src="/online-store-php/views/img/online-store-logo.jpg" alt="Logo" width="260" height="70" border="0">
+                    <img src="/online-store-php/views/img/online-store-logo.jpg" width="260" height="70">
                 </a>
-            </td>
-            <td width="58%" align="right">&nbsp;</td>
-            <td>
-                <a href="/online-store-php/views/cart.php">Your Cart</a>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <a href="/online-store-php/index.php">Home</a>
-                &nbsp; &middot; &nbsp; <a href="/online-store-php/views/inventory-list.php">Products</a>
-                &nbsp; &middot; &nbsp; <a href="#">Help</a>
-                &nbsp; &middot; &nbsp; <a href="#">Contact</a>
-            </td>
-            <td>
+            </li>
+            <li><a href="/online-store-php/index.php">Home</a></li>
+            <li><a href="/online-store-php/views/inventory-list.php">Products</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="nav-right">
+            <li>
                 <?php
                 if (isset($_SESSION['manager'])) {
                     echo '<a href="/online-store-php/scripts/logout.php">Logout</a>';
                 }
                 ?>
-            </td>
-        </tr>
-    </table>
-</div>
+            </li>
+            <li><a href="/online-store-php/views/cart.php">Your Cart</a></li>
+        </ul>
+    </nav>
+</header>

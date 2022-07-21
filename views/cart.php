@@ -10,15 +10,15 @@ require('../scripts/cart-script.php')
 </head>
 
 <body>
-    <div align="center" id="mainWrapper">
-        <?php include_once('./includes/header.php'); ?>
+    <?php include_once('./includes/header.php'); ?>
 
-        <div id="pageContent">
+    <div class="container">
+        <div class="cart-section">
             <?php include_once('./includes/cart-content.php'); ?>
         </div>
-
-        <?php include_once('./includes/footer.php'); ?>
     </div>
+
+    <?php include_once('./includes/footer.php'); ?>
 </body>
 
 </html>

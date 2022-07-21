@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 04, 2022 at 07:49 AM
+-- Generation Time: Jul 21, 2022 at 09:09 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ite101store`
+-- Database: `onlinestoredb`
 --
 
 -- --------------------------------------------------------
@@ -74,7 +74,9 @@ INSERT INTO `products` (`id`, `product_name`, `price`, `details`, `category`, `s
 (5, 'Camera', '3500', 'pang-myday', 'Clothing', 'Hats', '2022-06-21'),
 (6, 'Laptop Battery', '800', 'para sa laptop', 'Clothing', 'Pants', '2022-06-21'),
 (11, 'case', '200', 'demo', 'Clothing', 'Hats', '2022-06-24'),
-(12, 'Computer Mouse', '600', 'daga', 'Clothing', 'Shirts', '2022-07-04');
+(12, 'Computer Mouse', '600', 'daga', 'Clothing', 'Shirts', '2022-07-04'),
+(13, 'Keyboard', '950', 'simple keyboard', 'Clothing', 'Pants', '2022-07-20'),
+(14, 'Printer', '3000', 'Lumang printer', 'Clothing', 'Shirts', '2022-07-20');
 
 -- --------------------------------------------------------
 
@@ -149,7 +151,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `transactions`

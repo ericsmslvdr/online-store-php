@@ -1,3 +1,3 @@
-<div id="pageFooter">
-    Copyright | <a href="/online-store-php/views/admin-page.php#formAdmin">Admin</a>
-</div>
+<footer>
+    Coded by | <a href="/online-store-php/views/admin-page.php#formAdmin">&lt;ericsslvdr&gt;</a>
+</footer>

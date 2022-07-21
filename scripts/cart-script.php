@@ -27,7 +27,7 @@ if (isset($_POST['pid'])) {
             array_push($_SESSION['cart_array'], array("item_id" => $pid, "quantity" => 1));
         }
     }
-    header("location: cart.php");
+    header("location: ../index.php");
     exit();
 }
 
@@ -41,7 +41,7 @@ if (isset($_POST['index_to_remove']) && $_POST['index_to_remove'] != "") {
         unset($_SESSION['cart_array'][$key_to_remove]);
         sort($_SESSION['cart_array']);
     }
-    header("location: ./cart.php#tableCart");
+    header("location: ./cart.php");
     exit();
 }
 
@@ -71,7 +71,7 @@ if (isset($_POST['item_to_adjust']) && $_POST['item_to_adjust'] != "") {
             } //close the if
         } //close inner loop
     } //close foreach
-    header("location: ./cart.php#tableCart");
+    header("location: ./cart.php");
     exit();
 } //close mother if
 
@@ -86,10 +86,14 @@ if (isset($_GET['cmd']) && $_GET['cmd'] == "emptycart") {
 $cartOutput = "";
 $cartTotal = null;
 $product_id_array = '';
+$emptyCart = '';
 if (!isset($_SESSION['cart_array']) || count($_SESSION['cart_array']) < 1) {
     $cartOutput = '<h2 align="center">
                     Your shopping cart is empty
-                    </h2>';
+                    </h2>
+                    <tr>
+                        <td colspan="6" align="center">Empty!!</td>
+                    </tr>';
 } else {
     // Start the For Each loop
     $i = 0;
@@ -97,8 +101,9 @@ if (!isset($_SESSION['cart_array']) || count($_SESSION['cart_array']) < 1) {
         $itemID = $each_item['item_id'];
         $sql = mysqli_query($con, "SELECT * 
                                     FROM products 
-                                    WHERE id=$itemID 
+                                    WHERE id='$itemID' 
                                     LIMIT 1");
+
         while ($row = mysqli_fetch_array($sql)) {
             $product_name = $row['product_name'];
             $price = $row['price'];
@@ -116,15 +121,15 @@ if (!isset($_SESSION['cart_array']) || count($_SESSION['cart_array']) < 1) {
         // Dynamic table row assembly
         $cartOutput .= '<tr>
                             <td style="text-align: center;">
-                                <img src="../inventory-images/' . $itemID . '.jpg" alt="' . $product_name . '" width="60" height="60" border="1">
+                                <img src="../inventory-images/' . $itemID . '.jpg" alt="' . $product_name . '"height="150">
                                 <br>
                                 <a href="./product.php?id=' . $itemID . '">' . $product_name . '</a>
-                            </td>
+                                </td>
                             <td>
                                 ' . $details . '
                             </td>
                             <td>
-                                ₱' . $price . '
+                            ₱' . $price . '
                             </td>
                             <td style="text-align: center;">
                                 <form action="cart.php" method="post">
@@ -148,9 +153,12 @@ if (!isset($_SESSION['cart_array']) || count($_SESSION['cart_array']) < 1) {
                         </tr>';
         $i++;
     }
-    setlocale(LC_MONETARY, "en_PH");
-    $cartTotal = number_format($cartTotal, 2);
-    $cartTotal = '<div style="font-size:18px; margin-top:12px; text-align: right;">
-                    Cart Total: ₱ ' . $cartTotal . ' 
-                </div>';
+    $emptyCart = '<a href="cart.php?cmd=emptycart">
+                    <button class="pointer button delete">Empty Cart</button>
+                </a>';
 }
+setlocale(LC_MONETARY, "en_PH");
+$cartTotal = number_format($cartTotal, 2);
+$cartTotal = '<div style="font-size:18px; margin-top:12px; text-align: right;">
+    Cart Total: ₱ ' . $cartTotal . ' 
+    </div>';

@@ -10,15 +10,15 @@ include_once('../scripts/admin-page-script.php');
 </head>
 
 <body>
-    <div align="center" id="mainWrapper">
-        <?php include_once('./includes/header.php'); ?>
-
-        <div id="pageContent">
+    <?php include_once('./includes/header.php'); ?>
+    
+    <div class="container">
+        <div class="admin-section">
             <?php include_once('./includes/admin-page-content.php'); ?>
         </div>
-
-        <?php include_once('./includes/footer.php'); ?>
     </div>
+
+    <?php include_once('./includes/footer.php'); ?>
 </body>
 
 </html>

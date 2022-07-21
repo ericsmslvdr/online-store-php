@@ -10,15 +10,15 @@ include_once('../scripts/login.php')
 </head>
 
 <body>
-    <div align="center" id="mainWrapper">
-        <?php include_once("./includes/header.php"); ?>
+    <?php include_once("./includes/header.php"); ?>
 
-        <div id="pageContent" class="fixed">
+    <div class="container">
+        <div class="admin-login-section">
             <?php include_once('./includes/admin-login-content.php') ?>
         </div>
-
-        <?php include_once("./includes/footer.php"); ?>
     </div>
+
+    <?php include_once("./includes/footer.php"); ?>
 </body>
 
 </html>

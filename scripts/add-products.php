@@ -7,8 +7,8 @@ if (!isset($_SESSION['manager'])) {
     exit();
 }
 
-if (isset($_POST['productName'])) {
-    $productName = mysqli_real_escape_string($con, $_POST['productName']);
+if (isset($_POST['product-name'])) {
+    $productName = mysqli_real_escape_string($con, $_POST['product-name']);
     $price = mysqli_real_escape_string($con, $_POST['price']);
     $category = mysqli_real_escape_string($con, $_POST['category']);
     $subCategory = mysqli_real_escape_string($con, $_POST['subCategory']);

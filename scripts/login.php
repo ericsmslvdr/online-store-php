@@ -9,9 +9,9 @@ require('../scripts/database.php');
 
 $show = '<input type="submit" name="button" class="pointer button" value="Log In">';
 
-if (isset($_POST['frmUsername']) && isset($_POST['frmPassword'])) {
-    $manager = preg_replace('#[^A-Za-z0-9]#i', '', $_POST['frmUsername']);
-    $password = preg_replace('#[^A-Za-z0-9]#i', '', $_POST['frmPassword']);
+if (isset($_POST['frm-username']) && isset($_POST['frm-password'])) {
+    $manager = preg_replace('#[^A-Za-z0-9]#i', '', $_POST['frm-username']);
+    $password = preg_replace('#[^A-Za-z0-9]#i', '', $_POST['frm-password']);
 
     $sql = mysqli_query($con, "SELECT id 
                             FROM admin 

@@ -10,15 +10,15 @@ include_once('../scripts/add-products.php');
 </head>
 
 <body>
-    <div align="center" id="mainWrapper">
-        <?php include_once("./includes/header.php"); ?>
+    <?php include_once("./includes/header.php"); ?>
 
-        <div id="pageContent">
+    <div class="container">
+        <div class="inventory-section">
             <?php include_once('./includes/inventory-list-content.php') ?>
         </div>
-
-        <?php include_once("./includes/footer.php"); ?>
     </div>
+
+    <?php include_once("./includes/footer.php"); ?>
 </body>
 
 </html>
