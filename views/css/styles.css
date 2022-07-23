@@ -9,6 +9,9 @@ body {
     color: #333;
     line-height: 1.5em;
     background-color: #eef9ff;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 6em;
 }
 
 p {
@@ -18,12 +21,10 @@ p {
 a {
     text-decoration: none;
     color: #ecf0f1;
-
 }
 
 .container {
     padding: 0 15%;
-    min-height: 100%;
 }
 
 /* HEADER */
@@ -235,15 +236,17 @@ svg {
 .admin-login-section {
     display: flex;
     flex-direction: column;
-    min-height: 80%;
+    min-height: 50vh;
 }
 
 .login-form {
     margin: auto 0;
 }
+
 .login-form a {
     color: #3498db;
 }
+
 /* ADMIN LOGIN END */
 
 /* COMPONENTS */
@@ -306,11 +309,12 @@ span {
 
 /* COMPONENTS END */
 
-
 /* FOOTER */
 footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
     margin-top: 20px;
     background-color: #2c3e50;
     padding: 20px 0;
