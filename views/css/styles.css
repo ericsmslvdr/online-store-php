@@ -322,8 +322,12 @@ footer {
     color: #ecf0f1;
 }
 
+footer a {
+    transition: all 0.1s ease-out;
+}
+
 footer a:hover {
-    text-transform: uppercase;
     color: #46acff;
 }
+
 /* FOOTER END */
