@@ -158,7 +158,8 @@ if (!isset($_SESSION['cart_array']) || count($_SESSION['cart_array']) < 1) {
                 </a>';
 }
 setlocale(LC_MONETARY, "en_PH");
-$cartTotal = number_format($cartTotal, 2);
+$newCartTotal = intval($cartTotal); //convert string to int
+$cartTotal = number_format($newCartTotal, 2); //to avoid deprecated warning for number_format 
 $cartTotal = '<div style="font-size:18px; margin-top:12px; text-align: right;">
     Cart Total: ₱ ' . $cartTotal . ' 
     </div>';
